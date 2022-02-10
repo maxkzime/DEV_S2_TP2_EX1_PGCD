@@ -1,5 +1,6 @@
 // TP2/EX1/pgcd.h
 // exercice 1 : PGCD
+// BODIN Maxime C2
 // 22/10/02
 
 #ifndef PGCD_H
