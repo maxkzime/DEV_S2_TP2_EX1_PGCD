@@ -1,5 +1,6 @@
 // TP2/EX1/pgcd.cpp
 // exercice 1 : PGCD
+// BODIN Maxime C2
 // 22/10/02
 
 #include <iostream>
@@ -18,7 +19,7 @@ PGCD::PGCD(int a, int b)
     if(a<b)
         std::swap(a,b);
 
-    itsA = a;itsB = b;
+    itsA = a; itsB = b;
 }
 
 void PGCD::compute()
