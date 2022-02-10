@@ -1,5 +1,6 @@
 // TP2/EX1/main.cpp
 // exercice 1 : PGCD
+// BODIN Maxime C2
 // 22/10/02
 
 #include <iostream>
@@ -14,6 +15,8 @@ using namespace std;
 
 int main()
 {
+    std::cout << "BODIN Maxime C2" << "\n\n";
+    
     int a=0, b=0;
     cout << "Enter A and B: " << '\n';
     cin >> a; cin.ignore();
