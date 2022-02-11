@@ -10,19 +10,15 @@
 
 PGCD::PGCD(int a, int b)
 {   
-    if(a<0)
-        a*=-1;
-
-    if(b<0)
-        b*=-1;
+    a = abs(a);
+    b = abs(b);
 
     if(a<b)
         std::swap(a,b);
 
     itsA = a; itsB = b;
 
-    if(itsA >0 && itsB > 0)
-        compute();
+    compute();
 }
 
 void PGCD::compute()
