@@ -11,36 +11,54 @@
 
 #include "pgcd.h"
 
-using namespace std;
-
 int main()
 {
     std::cout << "BODIN Maxime C2" << "\n\n";
     
     int a=0, b=0;
-    cout << "Enter A and B: " << '\n';
-    cin >> a; cin.ignore();
-    cin >> b; cin.ignore();
-
-    cout << "a: " << a << " b: " << b <<  '\n';
+    std::cout << "Enter A and B: " << '\n';
+    std::cin >> a; std::cin.ignore();
+    std::cin >> b; std::cin.ignore();
 
     PGCD x(a,b);
     x.display();
 
+    std::cout << "a: " << x.getItsA() << " b: " << x.getItsB() <<  '\n';
+
+    // Tests Getter+Setter
+    std::cout << "Enter A and B: " << '\n';
+    std::cin >> a; std::cin.ignore();
+    std::cin >> b; std::cin.ignore();
+
+    x.setItsA(a);
+    x.setItsB(b);
+    x.compute();
+
+    std::cout << "a: " << x.getItsA() << " b: " << x.getItsB() <<  '\n';
+    std::cout << "PGCD : " << x.getPGCD() << '\n';
+
+
     //--------TESTS--------
-    cout << "Tests : " << "\n\n\n";
+    std::cout << "\n\n\n" << " Tests : " << "\n\n\n";
 
     // random number generator
-    auto seed = chrono::high_resolution_clock::now().time_since_epoch().count();
-    static mt19937 gen(seed);
+    auto seed = std::chrono::high_resolution_clock::now().time_since_epoch().count();
+    static std::mt19937 gen(seed);
 
-    uniform_int_distribution<> distribNumber(-30,30); // limites incluses du générateur de nombre aléatoire
+    std::uniform_int_distribution<> distribNumber(-30,30); // limites incluses du générateur de nombre aléatoire
 
     for (int i=0; i <11; i++)
     {
         PGCD x(distribNumber(gen),distribNumber(gen));
         x.display();
     }
+
+    // test (0,3)
+    x.setItsA(0);
+    x.setItsB(3);
+    x.compute();
+    x.display();
+
 
     return 0;
 }

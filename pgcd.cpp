@@ -20,28 +20,63 @@ PGCD::PGCD(int a, int b)
         std::swap(a,b);
 
     itsA = a; itsB = b;
+
+    if(itsA >0 && itsB > 0)
+        compute();
 }
 
 void PGCD::compute()
 {
     int r = 0;
+    int a = itsA;
+    int b = itsB;
 
     if(itsA <=0 || itsB <= 0)
-        std::cout << "PGCD impossible";
+        itsPGCD = 0 ;
     else
     {
         do{
-            r = itsA%itsB;
-            itsA=itsB;
-            itsB=r;
-        }while(itsB>0);
+            r = a%b;
+            a=b;
+            b=r;
+        }while(b>0);
 
-        std::cout << itsA ;
+        itsPGCD = a ;
     }
 }
 
 
-void PGCD::display()
+void PGCD::display() const
 {
-    std::cout << "PGCD(" << itsA << ',' << itsB << ") = ";compute(); std::cout << "\n\n";
+    if(itsA <=0 || itsB <= 0)
+        std::cout << "PGCD(" << itsA << ',' << itsB << ") = " << "PGCD impossible" << "\n\n";
+    else
+        std::cout << "PGCD(" << itsA << ',' << itsB << ") = " << itsPGCD << "\n\n";
+}
+
+// SETTER + GETTER
+
+int PGCD::getItsA() const
+{
+    return itsA;
+}
+
+void PGCD::setItsA(int newItsA)
+{
+    itsA = newItsA;
+}
+
+int PGCD::getItsB() const
+{
+    return itsB;
+}
+
+void PGCD::setItsB(int newItsB)
+{
+    itsB = newItsB;
+}
+
+int PGCD::getPGCD() const
+{
+    return itsPGCD;
 }

@@ -16,7 +16,16 @@ private:
 public:
     PGCD(int a, int b);
     void compute();
-    void display();
+    void display() const;
+
+    int getPGCD() const;
+
+    int getItsA() const;
+    void setItsA(int newItsA);
+
+    int getItsB() const;
+    void setItsB(int newItsB);
+
 };
 
 #endif // PGCD_H
