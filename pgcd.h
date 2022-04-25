@@ -18,6 +18,7 @@ public:
     void compute();
     void display() const;
 
+
     int getPGCD() const;
 
     int getItsA() const;

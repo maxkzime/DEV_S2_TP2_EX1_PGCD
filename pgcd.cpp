@@ -27,7 +27,7 @@ void PGCD::compute()
     int a = itsA;
     int b = itsB;
 
-    if(itsA <=0 || itsB <= 0)
+    if(itsA <= 0 || itsB <= 0)
         itsPGCD = 0 ;
     else
     {
@@ -51,28 +51,17 @@ void PGCD::display() const
 }
 
 // SETTER + GETTER
-
 int PGCD::getItsA() const
-{
-    return itsA;
-}
+{return itsA;}
 
 void PGCD::setItsA(int newItsA)
-{
-    itsA = newItsA;
-}
+{itsA = newItsA;}
 
 int PGCD::getItsB() const
-{
-    return itsB;
-}
+{return itsB;}
 
 void PGCD::setItsB(int newItsB)
-{
-    itsB = newItsB;
-}
+{itsB = newItsB;}
 
 int PGCD::getPGCD() const
-{
-    return itsPGCD;
-}
+{return itsPGCD;}
