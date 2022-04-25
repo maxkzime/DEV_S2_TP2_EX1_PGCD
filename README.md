@@ -1,2 +1,4 @@
-# TP2_S2_EX1
-## Exercice 1: PGCD
+# DEV_S2_TP2_EX1_PGCD
+ Exercice 1 : PGCD
+
+## finished 25/04/2022
